@@ -5,7 +5,7 @@ import { SearchIcon } from "lucide-react";
 export const Search = () => {
   return (
     <>
-      <div className="flex ml-2 border-2 w-[85%] border-gray-600 hover:bg-white bg-gray-200 rounded-full overflow-hidden">
+      <div className="flex ml-2 border-2 w-[85%] border-gray-600 hover:bg-white/50 bg-gray-200 rounded-full overflow-hidden">
         <SearchIcon className="text-gray-300 ml-3 mt-2" />
         <input
           type="search"
