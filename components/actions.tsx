@@ -1,27 +1,31 @@
-import { SignInButton, UserButton, currentUser } from "@clerk/nextjs";
+"use client";
+
+import { SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
+import { useConvexAuth } from "convex/react";
+import { Spinner } from "./spinners";
 
-export const Actions = async () => {
-  const user = await currentUser();
+export const Actions = () => {
+  const { isAuthenticated, isLoading } = useConvexAuth();
   return (
     <div className="flex items-center gap-x-3 justify-end">
       <ModeToggle />
-      {!user && (
-        <SignInButton>
-          <Button size="sm" variant="primary">
-            Login
-          </Button>
-        </SignInButton>
+      {isLoading && <Spinner />}
+      {!isAuthenticated && !isLoading && (
+        <>
+          <SignInButton mode="modal">
+            <Button variant="primary" size="sm">
+              Log In
+            </Button>
+          </SignInButton>
+        </>
       )}
-      {!!user && <UserButton afterSignOutUrl="/" />}
+      {isAuthenticated && (
+        <div>
+          <UserButton />
+        </div>
+      )}
     </div>
   );
 };
-
-{
-  /* <div className="flex items-center gap-x-3 justify-end">
-<ModeToggle />
-<UserButton afterSignOutUrl="/" />
-</div> */
-}
