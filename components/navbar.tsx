@@ -1,7 +1,6 @@
-"use client";
-
 import { Search } from "@/components/search";
 import Link from "next/link";
+import { Actions } from "./actions";
 
 export const Navbar = () => {
   return (
@@ -16,6 +15,7 @@ export const Navbar = () => {
       </div>
       <div className="flex flex-row justify-between items-center w-full">
         <Search />
+        <Actions />
       </div>
     </nav>
   );
