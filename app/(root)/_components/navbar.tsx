@@ -2,8 +2,8 @@
 
 import { Search } from "@/components/search";
 import Link from "next/link";
-import { Actions } from "./actions";
-import { useScrollTop } from "./hooks/use-scroll-top";
+import { Actions } from "../../../components/actions";
+import { useScrollTop } from "../../../components/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
