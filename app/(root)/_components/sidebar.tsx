@@ -64,7 +64,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <div className="space-y-4 pt-24 flex flex-col h-full text-primary lg:w-64 w-full">
+    <div className="space-y-4 pt-24 flex flex-col h-full text-primary lg:w-60 w-full">
       <div className="p-3 flex flex-1 justify-between">
         <div className="space-y-4">
           {routes.map((route) => (
