@@ -5,7 +5,11 @@ import Link from "next/link";
 import React from "react";
 
 const LandingPage = () => {
-  return <Navbar />;
+  return (
+    <div className="h-full w-full">
+      <Navbar />
+    </div>
+  );
 };
 
 export default LandingPage;

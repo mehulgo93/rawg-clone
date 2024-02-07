@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <div className="p-4 flex items-center justify-start flex-row">
+    <nav className="fixed top-0 w-full h-20 z-[49] px-2 lg:px-4 flex justify-between items-center shadow-sm">
       {/* <!-- Logo on the left --> */}
       <div className="flex items-center">
         <Link href="/">
@@ -17,6 +17,6 @@ export const Navbar = () => {
       <div className="flex flex-row justify-between items-center w-full">
         <Search />
       </div>
-    </div>
+    </nav>
   );
 };
